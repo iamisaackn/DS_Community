@@ -163,45 +163,136 @@ body {
     padding: 0;
 }
 
+/* Tutorials Section Styling */
 #tutorials {
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #333;
+}
+
+#tutorials h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+#tutorials p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    color: #7f8c8d;
+    text-align: center;
 }
 
 #tutorials h2 {
-    color: #333;
-    text-align: center;
+    font-size: 2em;
+    color: #2980b9;
+    margin-top: 40px;
     margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+}
+
+#tutorials h2:before {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: #2980b9;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
 }
 
 #tutorials ul {
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 40px;
 }
 
-#tutorials li {
-    margin: 10px 0;
+#tutorials ul li {
+    background-color: #ecf0f1;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#tutorials a {
+#tutorials ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#tutorials ul li a {
     text-decoration: none;
-    color: #007BFF;
+    color: #2980b9;
     font-weight: bold;
+    font-size: 1.2em;
+    display: inline-block;
+    margin-bottom: 8px;
 }
 
-#tutorials a:hover {
-    text-decoration: underline;
+#tutorials ul li a:hover {
+    color: #1abc9c;
 }
 
-
-#tutorials {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #fff;
+#tutorials ul li::before {
+    content: '🎓';
+    font-size: 1.5em;
+    margin-right: 10px;
 }
+
+#tutorials ul li a:hover::before {
+    content: '🌟';
+    transition: 0.3s;
+}
+
+#tutorials ul li p {
+    font-size: 1em;
+    color: #7f8c8d;
+    margin: 0;
+}
+
+/* Section Spacing */
+#tutorials ul li:nth-child(even) {
+    background-color: #ffffff;
+}
+
+#tutorials ul li:nth-child(odd) {
+    background-color: #ecf0f1;
+}
+
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #16a085;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    #tutorials h1 {
+        font-size: 2em;
+    }
+
+    #tutorials p {
+        font-size: 1em;
+    }
+
+    #tutorials ul li {
+        padding: 15px;
+    }
+
+    #tutorials ul li a {
+        font-size: 1.1em;
+    }
+}
+
 
 /* Footer Styles */
 footer {
