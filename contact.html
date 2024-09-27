@@ -41,30 +41,38 @@
     </header>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h1>Contact Me</h1>
-        <p>Have any questions or want to collaborate? Feel free to reach out through the form below.</p>
+    <!-- Contact Form -->
+<div class="contact-form">
+    <form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLScW4ans4MrkYiG4cuAGwawRiXjUGRzg7KAV2GZ3zoKCMMEqRw/formResponse" method="POST">
+        <input type="hidden" name="entry.649243354" id="name" required>
+        <input type="hidden" name="entry.11419776" id="email" required>
+        <input type="hidden" name="entry.1695519555" id="subject" required>
+        <input type="hidden" name="entry.1766540838" id="message" required>
 
-        <!-- Contact Form -->
-        <div class="contact-form">
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your full name" required>
+        <label for="name-input">Name:</label>
+        <input type="text" id="name-input" placeholder="Your full name" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Your email address" required>
+        <label for="email-input">Email:</label>
+        <input type="email" id="email-input" placeholder="Your email address" required>
 
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
+        <label for="subject-input">Subject:</label>
+        <input type="text" id="subject-input" placeholder="Subject of your message" required>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Your message" required></textarea>
+        <label for="message-input">Message:</label>
+        <textarea id="message-input" placeholder="Your message" required></textarea>
 
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
 
+<script>
+document.getElementById('contact-form').onsubmit = function() {
+    document.getElementById('name').value = document.getElementById('name-input').value;
+    document.getElementById('email').value = document.getElementById('email-input').value;
+    document.getElementById('subject').value = document.getElementById('subject-input').value;
+    document.getElementById('message').value = document.getElementById('message-input').value;
+};
+</script>
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 My Data Science Website. Follow me on 
