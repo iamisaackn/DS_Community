@@ -72,7 +72,15 @@
             <a href="https://www.linkedin.com/in/isaackngugi/">LinkedIn</a>
         </p>
     </footer>
-
+    // Contact Form
+<script>
+document.getElementById('contact-form').onsubmit = function() {
+    document.getElementById('name').value = document.getElementById('name-input').value;
+    document.getElementById('email').value = document.getElementById('email-input').value;
+    document.getElementById('subject').value = document.getElementById('subject-input').value;
+    document.getElementById('message').value = document.getElementById('message-input').value;
+};
+</script>
     <script src="scripts.js"></script>
 </body>
 </html>
