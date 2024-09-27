@@ -55,3 +55,12 @@ document.querySelector('.menu-icon').addEventListener('click', () => {
     document.querySelector('.nav-links').classList.toggle('active');
 });
 
+// Contact Form
+<script>
+document.getElementById('contact-form').onsubmit = function() {
+    document.getElementById('name').value = document.getElementById('name-input').value;
+    document.getElementById('email').value = document.getElementById('email-input').value;
+    document.getElementById('subject').value = document.getElementById('subject-input').value;
+    document.getElementById('message').value = document.getElementById('message-input').value;
+};
+</script>
